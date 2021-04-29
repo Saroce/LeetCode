@@ -8,7 +8,8 @@
  */
 
 /* 
-    思路：头插法
+    思路1：头插法
+    思路2：利用两个指针，cur，prev
 */
 
 public class Solution {
@@ -23,5 +24,16 @@ public class Solution {
         }
 
         return dummyNode.next;
+
+        /*
+        ListNode cur = head, prev = null;
+        while (cur != null) {
+            ListNode temp = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = temp;
+        }
+        return prev;
+        */
     }
 }
